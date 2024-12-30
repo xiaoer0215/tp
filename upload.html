@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>上传图片</title>
+</head>
+<body>
+    <header>
+        <h1>上传您的图片</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="upload.html">上传图片</a></li>
+                <li><a href="links.html">查看链接</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form id="upload-form">
+            <input type="file" id="image-input" accept="image/*" required>
+            <button type="submit">上传图片</button>
+        </form>
+
+        <div id="link-container" style="display: none;">
+            <h3>图片链接</h3>
+            <input type="text" id="image-link" readonly>
+            <button onclick="embedCode()">获取嵌入代码</button>
+            <textarea id="embed-code" rows="4" readonly></textarea>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
